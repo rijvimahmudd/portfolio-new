@@ -3,8 +3,13 @@ import { Box, Container, CssBaseline } from '@mui/material';
 import Navbar from './components/navbar';
 import Hero from './components/hero';
 import About from './components/about';
+import useDocumentTitle from './hooks/useDocumentTitle';
+import Skill from './components/skills';
+import Project from './components/projects';
 
-function App() {
+const App = () => {
+	useDocumentTitle('Rijvi Mahmud - Web Developer | Problem Solver');
+
 	return (
 		<>
 			<CssBaseline></CssBaseline>
@@ -18,10 +23,12 @@ function App() {
 				>
 					<Hero></Hero>
 					<About></About>
+					<Skill></Skill>
+					<Project></Project>
 				</Box>
 			</Container>
 		</>
 	);
-}
+};
 
 export default App;

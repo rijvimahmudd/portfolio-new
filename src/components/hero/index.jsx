@@ -9,7 +9,7 @@ import {
 } from '@mui/material';
 import Profession from './profession';
 import Typewriter from 'typewriter-effect';
-// import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
+import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import { styled } from '@mui/material/styles';
 
 const profession = [
@@ -84,11 +84,11 @@ const Hero = () => {
 						>
 							RESUME
 						</Link>
-						{/* <DescriptionOutlinedIcon
+						<DescriptionOutlinedIcon
 							sx={{
 								fontSize: '1.25rem',
 							}}
-						></DescriptionOutlinedIcon> */}
+						></DescriptionOutlinedIcon>
 					</BootstrapButton>
 				</CardContent>
 			</Box>
