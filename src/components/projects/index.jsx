@@ -6,6 +6,7 @@ import {
 	Typography,
 	Stack,
 	Link,
+	Box,
 } from '@mui/material';
 import LaunchIcon from '@mui/icons-material/LaunchTwoTone';
 
@@ -18,7 +19,7 @@ const data = [
 
 const Project = () => {
 	return (
-		<>
+		<Box sx={{ border: '1px solid cyan' }}>
 			<Typography variant="h4" fontWeight={'bold'} textAlign={'center'} m={3}>
 				Projects
 			</Typography>
@@ -121,7 +122,7 @@ const Project = () => {
 					</Grid>
 				))}
 			</Grid>
-		</>
+		</Box>
 	);
 };
 

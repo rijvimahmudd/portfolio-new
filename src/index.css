@@ -21,6 +21,8 @@ body {
 	min-width: 100vw;
 	min-height: 100vh;
 	background-color: #111a28;
+	overflow: auto;
+	overflow-x: hidden;
 }
 * {
 	box-sizing: border-box;
