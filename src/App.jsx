@@ -8,6 +8,7 @@ import useDocumentTitle from './hooks/useDocumentTitle';
 import Skill from './components/skills';
 import Project from './components/projects';
 import Contact from './components/contact';
+import Footer from './components/footer';
 
 const App = () => {
 	useDocumentTitle('Rijvi Mahmud - Web Developer | Problem Solver');
@@ -35,6 +36,7 @@ const App = () => {
 					<Contact></Contact>
 				</Box>
 			</Container>
+			<Footer></Footer>
 		</>
 	);
 };
