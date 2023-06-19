@@ -1,4 +1,4 @@
-import { Box, Typography } from '@mui/material';
+import { Box, Link, Typography } from '@mui/material';
 
 const Footer = () => {
 	return (
@@ -12,7 +12,7 @@ const Footer = () => {
 			}}
 		>
 			<Typography variant="subtitle2" textAlign={'center'}>
-				Design Developed & Engineering by &copy; Rijvi Mahmud.
+				Design Developed & Engineering by &copy;<Link> Rijvi Mahmud.</Link>
 			</Typography>
 		</Box>
 	);
