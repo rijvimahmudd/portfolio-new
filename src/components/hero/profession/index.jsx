@@ -21,7 +21,17 @@ const Profession = ({ profession = [], color = '' }) => {
 	});
 
 	return (
-		<Typography variant="h6" color="#ffffff" fontWeight={'regular'}>
+		<Typography
+			variant="h6"
+			color="#ffffff"
+			fontWeight={'regular'}
+			sx={{
+				display: {
+					xs: 'none',
+					md: 'block',
+				},
+			}}
+		>
 			{result}
 		</Typography>
 	);
