@@ -99,7 +99,7 @@ const Skill = () => {
 				justifyContent={'center'}
 				alignItems={'center'}
 				useFlexGap
-				spacing={10}
+				spacing={8}
 				flexWrap={'wrap'}
 				// sx={{
 				// 	border: '1px solid tomato',

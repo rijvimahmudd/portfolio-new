@@ -1,4 +1,5 @@
 import './App.css';
+import React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import { Box, Container } from '@mui/material';
 import Navbar from './components/navbar';
@@ -36,7 +37,7 @@ const App = () => {
 					<Contact></Contact>
 				</Box>
 			</Container>
-			<Footer></Footer>
+			{/* <Footer></Footer> */}
 		</>
 	);
 };

@@ -12,6 +12,7 @@ import Typewriter from 'typewriter-effect';
 import DescriptionOutlinedIcon from '@mui/icons-material/DescriptionOutlined';
 import { styled } from '@mui/material/styles';
 import { useEffect, useState } from 'react';
+import firstWordCapitalize from '../../utils/firstWordCapitalize';
 
 const profession = [
 	'web developer',
@@ -53,33 +54,37 @@ const Hero = () => {
 	return (
 		<Card
 			sx={{
-				display: 'flex',
+				display: 'grid',
+				gridTemplateColumns: 'repeat(12, 1fr)',
+				gridTemplateRows: {
+					xs: 'repeat(2, 42vh)',
+					md: 'auto',
+				},
+				gridAutoRows: '1fr',
+				// gridTemplateRows: 'auto',
 				gap: {
 					xs: '0px',
 					md: '55px',
 				},
 
-				flexDirection: {
-					xs: 'column',
-					md: 'row',
-				},
+				// flexDirection: {
+				// 	xs: 'column',
+				// 	md: 'row',
+				// },
 				height: '90vh',
 				justifyContent: {
-					// xs: 'center',
-					// md: 'center',
-				},
-				alignItems: {
+					xs: 'center',
 					md: 'center',
 				},
-				background: 'none',
-				paddingX: {
-					md: '0px',
-					xs: '10px',
+				alignItems: {
+					xs: 'center',
+					md: 'center',
 				},
-				// '@media (max-width: 767px)': {
-				// 	flexDirection: 'column',
-				// 	height: 'auto',
-				// 	// justifyContent: 'center',
+				alignContent: 'center',
+				background: 'none',
+				// paddingX: {
+				// 	md: '0px',
+				// 	xs: '10px',
 				// },
 			}}
 		>
@@ -88,9 +93,13 @@ const Hero = () => {
 					display: 'flex',
 					flexDirection: 'column',
 					width: '100%',
+					gridColumn: {
+						md: 'span 7',
+						xs: '1/-1',
+					},
 				}}
 			>
-				<CardContent sx={{ flex: '1 0 auto' }}>
+				<CardContent sx={{ flex: '1 0 auto', padding: 1.5 }}>
 					<Typography variant="h5" fontWeight="medium" color="#fff">
 						Hello! I am
 					</Typography>
@@ -101,7 +110,9 @@ const Hero = () => {
 						color="#00b2df"
 					>
 						{availWidth ? (
-							<Typography variant="h3">Rijvi Mahmud</Typography>
+							<Typography variant="h3" fontWeight={'bold'}>
+								Rijvi Mahmud.
+							</Typography>
 						) : (
 							<Typewriter
 								options={{
@@ -128,10 +139,11 @@ const Hero = () => {
 					>
 						<Typewriter
 							options={{
-								strings: profession,
+								strings: firstWordCapitalize(profession),
 								autoStart: true,
 								loop: true,
-								delay: 90,
+								delay: 30,
+								pauseFor: 100,
 							}}
 						/>
 					</Typography>
@@ -139,13 +151,20 @@ const Hero = () => {
 					<BootstrapButton
 						sx={{
 							backgroundColor: '#00b2df',
-							padding: '10px 20px',
+							padding: {
+								md: '10px 20px',
+								xs: '7px 10px',
+							},
 							color: '#ffffff',
 							display: 'flex',
 							alignItems: 'center',
 							justifyContent: 'center',
 							gap: 0.6,
 							mt: 1.3,
+							borderRadius: {
+								xs: 7.5,
+								md: 1.5,
+							},
 						}}
 					>
 						<Link
@@ -166,16 +185,21 @@ const Hero = () => {
 			</Box>
 			<CardMedia
 				sx={{
+					gridColumn: {
+						md: 'span 5',
+						xs: 'span 12',
+					},
+					// alignSelf: 'baseline',
 					width: '100%',
 					maxWidth: {
-						xs: '100%',
+						xs: 500,
 						md: 460,
 					},
-					borderRadius: '30px',
+					borderRadius: '20px',
 					marginTop: {
 						md: -5,
 					},
-					padding: 2,
+					padding: 1,
 				}}
 				component="img"
 				image="/avento.gif"

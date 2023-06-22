@@ -43,7 +43,7 @@ const Navbar = () => {
 				>
 					<Typography sx={{ flexGrow: 1 }}>
 						<Link href="/" sx={{ border: '1px solid white' }}>
-							<Box component={'img'} height={'54px'} src="/logo.svg"></Box>
+							<Box component={'img'} height={'54px'} src="/Logo.svg"></Box>
 						</Link>
 					</Typography>
 
